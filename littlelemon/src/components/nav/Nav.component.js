@@ -1,4 +1,4 @@
-import '../stylesheet/mystyles.css'; //applying css styles, you just import ONLY
+import './nav.css'; //applying css styles, you just import ONLY
 
 export default function Nav(){
     return (
@@ -6,7 +6,7 @@ export default function Nav(){
         <div class="nav">
             <ul class="nav-container">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
                     <a href="#">About</a>
@@ -15,7 +15,7 @@ export default function Nav(){
                     <a href="#">Menu</a>
                 </li>
                 <li>
-                    <a href="#">Reservations</a>
+                    <a href="/Reservations/Findtable">Reservations</a>
                 </li>
                 <li>
                     <a href="#">Order online</a>

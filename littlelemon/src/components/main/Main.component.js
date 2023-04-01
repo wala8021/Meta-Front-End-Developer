@@ -1,10 +1,10 @@
-import '../stylesheet/mystyles.css'; //applying css styles, you just import ONLY
-import restaurantfood from '../images/restaurantfood.jpg'
-import greeksalad from '../images/greek salad.jpg'
-import Brucheta from '../images/Brucheta.png'
-import lemondessert from '../images/lemon dessert.jpg'
-import restaurant from '../images/restaurant.jpg'
-import restaurantchef from '../images/restaurantchefB.jpg'
+import './main.css'; //applying css styles, you just import ONLY
+import restaurantfood from '../../images/restaurantfood.jpg'
+import greeksalad from '../../images/greek salad.jpg'
+import Brucheta from '../../images/Brucheta.png'
+import lemondessert from '../../images/lemon dessert.jpg'
+import restaurant from '../../images/restaurant.jpg'
+import restaurantchef from '../../images/restaurantchefB.jpg'
 
 export default function Main(){
     return (
@@ -18,7 +18,7 @@ export default function Main(){
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
                         eirmod tempor invidunt ut labore et
                     </p>
-                    
+
                 </article>
 
                 <img src={restaurantfood}/>
@@ -85,6 +85,5 @@ export default function Main(){
                 <img src={restaurantchef} class="image-2"></img>
             </section>
         </div>
-       
     )
 }

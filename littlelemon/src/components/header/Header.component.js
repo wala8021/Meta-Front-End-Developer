@@ -1,5 +1,5 @@
-import logo from '../images/logo.png';
-import '../stylesheet/mystyles.css'; //applying css styles, you just import ONLY
+import logo from '../../images/logo.png';
+import './header.css'; //applying css styles, you just import ONLY
 
 export default function Header(){
     return (

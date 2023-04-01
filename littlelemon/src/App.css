@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.top-parent {
+  display: grid;
+  /* grid-template-columns: repeat(2,auto); */
+}
+/* .nav {
+  margin-left: 22%;
+} */

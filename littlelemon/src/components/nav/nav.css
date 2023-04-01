@@ -1,0 +1,17 @@
+.nav-container {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(6, auto);
+    margin-left: 43%;
+    /* align-items: end; */
+    margin-top: -40px;
+    margin-right: 100px;
+    column-gap: 10px;
+    border: green solid ;
+    font-weight: bold;
+    width: 420px;
+}
+
+.nav ul {
+    list-style: none;
+}
