@@ -1,9 +1,4 @@
-// import logo from './logo.svg';
 import './App.css';
-// import Header from './components/Header';
-// import Nav from './components/Nav';
-// import Main from './components/Main';
-// import Footer from './components/Footer';
 import Home from './pages/Home';
 
 import { BrowserRouter, Routes, Route} from 'react-router-dom' //react-router-dom has to be installed npm install react-router-dom
@@ -32,7 +27,7 @@ function App() {
     email: "",
     phone: "",
     communication: ""
-    // seating: "Select One",
+
   };
 
 
@@ -45,7 +40,7 @@ function App() {
   const [selectedEmail, setEmail]=useState(tableObject.email);
   const [selectedPhone, setPhone]=useState(tableObject.phone);
   const [selectedCommunication, setCommunication]=useState(tableObject.communication);
-  // const [selectedSeating, setSeating]=useState(tableObject.seating);
+
 
   const currentBooking = {
     selectedDate: selectedDate, 
@@ -56,15 +51,8 @@ function App() {
     selectedEmail: selectedEmail,
     selectedPhone: selectedPhone,
     selectedCommunication: selectedCommunication
-    // selectedSeating: selectedSeating
   };
-  // const initialAvailableTimes = fetchAPI(Date.parse(todaydate));
-  // const [AvailableTimes,setAvailableTimes] = useState(initialAvailableTimes);
-  // const functionAvailableTimes= (selectedDate)=>{
-  //   const nowAvailableTimes=fetchAPI(Date.parse(selectedDate));
-  //   //setAvailableTimes(nowAvailableTimes);
 
-  // }
 
 
   return (
@@ -77,20 +65,11 @@ function App() {
             <Route path='Findtable' element={<Findtable
             tableprops={tableObject}
             currentBooking = {currentBooking}
-            // today={todaydate}
-            //AvailableTimes={AvailableTimes}
-            //functionAvailableTimes={functionAvailableTimes}
-            //handleDateChange={handleDateChange}
             todaydate = {todaydate}
-            //initialAvailableTimes={initialAvailableTimes} //passing initialAvailableTimes as a prop
-            //bookedAvaliableTimes={bookedAvaliableTimes} //passing bookedAvaliableTimes as a prop
-            // nowAvailableTimes={nowAvailableTimes} //passing nowAvailableTimes as a prop
-            // setNowAvailableTimes={setNowAvailableTimes()}
             selectedDate={selectedDate}
             selectedTime={selectedTime}
             selectedDinners={selectedDinners}
             selectedOccasion={selectedOccasion}
-            // selectedSeating={selectedSeating}
             setDate={setDate}
             setTime={setTime}
             setDinners={setDinners}
@@ -99,7 +78,6 @@ function App() {
             setEmail={setEmail}
             setPhone={setPhone}
             setCommunication={setCommunication}
-            // setSeating={setSeating}
 
             />}/>
             <Route path='Signup' element={<Signup/>}/>

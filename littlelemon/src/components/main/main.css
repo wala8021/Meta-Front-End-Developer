@@ -5,11 +5,14 @@
     margin-right: 50px; */
     min-height: 500px;
     max-height: auto;
-    border: orange solid ;
+    /* border: orange solid  ; */
+    border: grey solid  ;
+    border-width: 1px;
 }
 .main section {
     padding-top: 10px;
-    border: orange solid ;
+    /* border: orange solid ; */
+
 }
 .hero {
     display: grid;
@@ -88,6 +91,7 @@
 .specials, .testimonials, .description {
     /* margin-left: 100px;
     margin-right: 100px; */
+    
 }
 .specials span {
     padding-left: 15px;
@@ -133,7 +137,7 @@
 }
 .card {
     /* width: 100px; */
-    border: black solid;
+    border: grey thin solid;
     height: 200px;
     min-width: 150px;
 }
@@ -165,8 +169,8 @@
     /* justify-items: space-evenly; */
 }
 .testimonials article {
-    background-color: lightblue;
-    border: black solid;
+    background-color: rgb(209, 238, 247);
+    border:  grey thin solid;
 }
 .testimonials h4 {
     grid-row-start: 1;
@@ -245,7 +249,9 @@
     grid-row-end: 13;
     grid-column-start: 4;
     grid-column-end: 10;
-    border: green 1px solid;
+    /* border: green 1px solid; */
+    /* border: grey thin solid  ; */
+    background-color: rgb(248, 246, 246);
 }
 .tablepictures{
     /* height: auto; */
@@ -329,6 +335,7 @@
     grid-template-columns: 1fr 2fr;
     /* grid-template-rows: repeat(14, minmax(2rem,auto)); */
     align-items: center;
+    margin-left: 10px;
 
 }
 .booking__signupdetails--lbl{
@@ -340,6 +347,11 @@
     grid-column: 1/-1;
     margin-top: 1rem;
     margin-bottom: 1rem;
+
+}
+.booking__form h5 {
+    margin-left: 10px;
+    margin-right: 10px;
 
 }
 .booking__signupdetails .detail {

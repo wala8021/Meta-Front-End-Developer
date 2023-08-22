@@ -9,9 +9,11 @@
 }
 
 .footer section {
-    border: blue solid ;
+    /* border: blue solid ; */
+    /* border:  green solid; */
     padding-left: 20px;
     margin-bottom: 20px;
+    background-color: rgb(228, 226, 226);
 
 }
 

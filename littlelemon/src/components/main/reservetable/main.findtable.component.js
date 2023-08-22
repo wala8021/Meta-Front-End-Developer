@@ -8,11 +8,12 @@ import * as Yup from 'yup';
 import { useState, useReducer, useEffect } from 'react';
 import {fetchAPI, submitAPI} from '../../../api/api';
 
+
+
+
 export default function Findtable(props){ //pass table object as props to lift up state to App.js level
+    
     const navigate = useNavigate();
-
-
-  
 
     const validationSchemaTable = Yup.object().shape({
         date: Yup.string().notOneOf(["Select One", ""], "Select Date"),
@@ -28,11 +29,7 @@ export default function Findtable(props){ //pass table object as props to lift u
 
  
     let initialValues=props.tableprops;
-    // let time_options = ["Select One",...props.AvailableTimes];
 
-    //console.log(initialValues.time);
-    // initialValues.time = props.AvailableTimes[0];
-    //const [seat_options, setseat_options] = useState(["Select One","01 guest", "02 guests","03 guests","04 guests","05 guests","08 guests", "10 guests" ]);
     const seat_options=["Select One","01 guest", "02 guests","03 guests","04 guests","05 guests","08 guests", "10 guests" ];
     const occasion_options = ["Select One","Birthday","Party","Graduation","Anniversary","Wedding","Business","Family Reunion"];
 
@@ -49,10 +46,6 @@ export default function Findtable(props){ //pass table object as props to lift u
     function updateTimes(state, action){
         switch(action.type){
             case 'dateChange':{
-            //console.log(action.currentValue);
-            //console.log(state);
-            // props.setDate(action.currentValue);
-            // props.setTime("Select One");
             return fetchAPI(Date.parse(action.currentValue));
 
                     }
@@ -85,10 +78,6 @@ export default function Findtable(props){ //pass table object as props to lift u
                 console.log(e.target.value);
                 props.setOccasion(e.target.value);
             }
-            // else if(e.target.name ==="seating"){
-            //     console.log(e.target.value);
-            //     props.setSeating(e.target.value);
-            // } 
             else if(e.target.name ==="fullname"){
                 console.log(e.target.value);
                 props.setFullName(e.target.value);
@@ -121,60 +110,24 @@ export default function Findtable(props){ //pass table object as props to lift u
             }
 
         };
-        // setTimeout(() => {
-        //   alert(JSON.stringify(values, null, 2));
-        //   setSubmitting(false);
-        // }, 40);
-        // props.tableprops.date = values.date;
-        // props.tableprops.time = values.time;
-        // props.tableprops.dinners = values.dinners;
-        // props.tableprops.occasion = values.occasion;
-        // props.tableprops.seating = values.seating;
-
-        // props.currentBooking.date = values.date;
-        // props.currentBooking.time = values.time;
-        // props.currentBooking.dinners = values.dinners;
-        // props.currentBooking.occasion = values.occasion;
-        // props.currentBooking.seating = values.seating;
-
-        //seting the available times variable
-        // props.bookedAvaliableTimes.push(values.time);
-        // setNowAvailableTimes();
-        // console.log(props.bookedAvaliableTimes);
-        // console.log(nowAvailableTimes);
-
-       // resetForm({values: initialValues});
-        // {navigate('Signup')};//should be called after submission!!
-        // {dispatch({"Type":"table-submit"})}
       };
 
 
       return (
         <div className='main findtable'>
-            {/* This is the main findtable page */}
             <div className='form-findtable'>
-                {/* <p>Find a Table for any Occasion</p> */}
+
                 <Formik
                     validationSchema={validationSchemaTable}
                     onSubmit={submitForm}
                     initialValues={initialValues}
                 >
                     <Form 
-                    // onChange={(e)=>{
-                    //     e.preventDefault();
-                    //     if (e.target.name ==="date"){
-                    //         props.functionAvailableTimes(e.target.value);
-                    //         console.log(e.target.value);
-
-                    //         //console.log(props.AvailableTimes);//gives previous value because is executed before functionAvailableTimes returns value
-                    //     }
-                    // }}
                     onChange={handleDateChange}
                     >
                         <section className='tablepictures'>
                         <h2>Find a Table for any Occasion</h2>
-                            {/* <img src={chefB} width="100%"/> */}
-                            {/* <img src={Mario} width="180px"/> */}
+
                         </section>
                         <section className='tabledetails'>
                         <div>
@@ -185,10 +138,6 @@ export default function Findtable(props){ //pass table object as props to lift u
                         <div>
                             <label htmlFor="time"><b>Time</b>  </label>
                             <Field className="field" name="time" as="select" id="time">
-                                {/* <option value="10:00">10:00AM</option>
-                                <option value="10:30">10:30AM</option>
-                                <option value="11:00">11:00AM</option>
-                                <option value="11:30">11:30AM</option> */}
                                 {time_options.map((item)=><option value={item} key={item}>{item}</option>)}
                             </Field>
                             <ErrorMessage name="time" component="div" className='error'/>
@@ -196,10 +145,6 @@ export default function Findtable(props){ //pass table object as props to lift u
                         <div>
                             <label htmlFor="dinners"><b>Dinners</b>  </label>
                             <Field className="field" name="dinners" as="select">
-                                {/* <option value="1">01</option>
-                                <option value="2">02</option>
-                                <option value="4">04</option>
-                                <option value="10">10</option> */}
                                 {seat_options.map((item)=><option value={item} key={item}>{item}</option>)}
                             </Field>
                             <ErrorMessage name="dinners" component="div" className='error'/>
@@ -207,10 +152,6 @@ export default function Findtable(props){ //pass table object as props to lift u
                         <div>
                             <label htmlFor="occasion"><b>Occasion</b>  </label>
                             <Field className="field" name="occasion" as="select" >
-                                {/* <option value="Birthday">Birthday</option>
-                                <option value="Party">Party</option>
-                                <option value="Graduation">Graduation</option>
-                                <option value="Anniversary">Anniversary</option> */}
                                  {occasion_options.map((item)=><option value={item} key={item}>{item}</option>)}
                             </Field>
                             <ErrorMessage name="occasion" component="div" className='error'/>
@@ -225,7 +166,6 @@ export default function Findtable(props){ //pass table object as props to lift u
                             <Field name="email" className="email field" type="text" placeholder="Email" />
                             <ErrorMessage name="email" component="div" className='error'/>
                            
-                       
                             <label name="phone" className="lbl personaldetails__phone--lbl" htmlFor="phone">Phone Number</label>
                             <Field name="phone" className="phone field" type="text" placeholder="Phone Number"/>
                             <ErrorMessage name="phone" component="div" className='error'/>
@@ -244,18 +184,7 @@ export default function Findtable(props){ //pass table object as props to lift u
                             </label>
                                 <ErrorMessage name="confirmation" component="div" className='error'/>
                                 </div>
-                        {/* <div>
-                            <p><b>Searting Options</b></p>
-                            <label>
-                                <Field className="field" name="seating" type="radio" value="Inside"/>
-                                  Inside
-                            </label><br/>
-                            <label>
-                                <Field className="field" name="seating" type="radio" value="Outside"/>
-                                  Outside
-                            </label>
-                            <ErrorMessage name="seating" component="div" className='error'/>
-                        </div> */}
+
                         </section>
                         <button className='btn btn-findtable' type='submit' aria-label="Book">Book Now</button>
                     </Form>
@@ -265,5 +194,3 @@ export default function Findtable(props){ //pass table object as props to lift u
         </div>
     )
 };
-
-// export {initializeTimes, myreducer, useReducer};
