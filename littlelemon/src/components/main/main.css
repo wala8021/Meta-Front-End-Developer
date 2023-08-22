@@ -38,18 +38,42 @@
     border-radius: 20px;
     /* margin-left: 100%; */
 }
+.btn {
+    background-color: yellow;
+    border-radius: 20px;
+    height: 33px;
+    color: black;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* width: 150px; */
+}
+.btn:hover{
+    background-color: #495E57;
+}
 
-.hero button{
+.btn-hero {
     /* grid-column-start: 2; */
     grid-row-start: 2;
     /* grid-row-end: 3; */
     grid-column-start: 3;
     grid-column-end: 5;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     /* width: 120px; */
+    /* height: 33px; */
+}
+/* .hero button{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    border-radius: 5px;
+    width: 120px;
     height: 33px;
 
-}
+} 
+*/
+
 .hero p{
    /* height: 30%; */
    /* overflow: hidden; */
@@ -64,6 +88,22 @@
 .specials, .testimonials, .description {
     /* margin-left: 100px;
     margin-right: 100px; */
+}
+.specials span {
+    padding-left: 15px;
+    font-size: 12px;
+    float: right;
+    padding-right: 10px;
+}
+.specials h7 {
+    font-size: 12px;
+    padding-left: 10px;
+    font-weight: bold;
+
+}
+.specials p {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .specials-1 {
     display: grid;
@@ -93,9 +133,9 @@
 }
 .card {
     /* width: 100px; */
-    width: 100%;
     border: black solid;
     height: 200px;
+    min-width: 150px;
 }
 #card-1 {
     grid-column-start: 3;
@@ -192,4 +232,149 @@
     grid-column-start: 8;
     grid-column-end: 11;
     margin-top: -60px;
+}
+
+.findtable, .signup, .booking {
+    display: grid;
+    grid-template-columns: repeat(12,8.33%);
+    grid-template-rows: 30px;
+    grid: column gap 20px;
+}
+.form-findtable, .form-signup, .booking__form {
+    grid-row-start: 1;
+    grid-row-end: 13;
+    grid-column-start: 4;
+    grid-column-end: 10;
+    border: green 1px solid;
+}
+.tablepictures{
+    /* height: auto; */
+    background-image: url('../../images/restaurantchefB.jpg');
+    height: 400px;
+    background-size: cover;
+}
+.btn-findtable, .btn-signup, .btn-book {
+    /* grid-row-start: 13;
+    height: 31px; 
+    grid-column-start: 8;
+    grid-column-end: 10;
+    border: green 1px solid; */
+    width: 150px;
+    float: right;
+}
+.tabledetails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,30px);
+    row-gap: 15px;
+    column-gap: 40px;
+}
+.tabledetails .field {
+    float: right;
+    width: 60%;
+    height: 90%;
+}
+.seating .field {
+    margin-right: 10px;
+    margin-top: 12px;
+}
+/* .tabledetails, .signupdetails {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.tabledetails span {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.tabledetails div, .signupdetails div {
+    padding-bottom: 10px;
+}
+.tabledetails label, .signupdetails label {
+    padding-right: 10px;
+} */
+.signup__hero{
+    height: 400px;
+    background-image: url('../../images/Mario-and-Adrian-A.jpg');
+    background-size: cover;
+    text-align: center;
+}
+.signupdetails .detail {
+    width: 70%;
+    height: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+.booking__signupdetails span{
+    padding-left:4px;
+}
+.signupdetails {
+    text-align: center;
+
+}
+.signupdetails .request{
+    min-height: 40px;
+}
+
+.booking__form--hero {
+    height: 400px;
+    background-image: url('../../images/restaurant.jpg');
+    background-size: cover;
+    text-align: center;
+}
+
+.booking__signupdetails {
+    /* padding-left: 20px;
+    padding-right: 20px; */
+   
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* grid-template-rows: repeat(14, minmax(2rem,auto)); */
+    align-items: center;
+
+}
+.booking__signupdetails--lbl{
+    /* grid-row-start: 10; */
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.booking__signupdetails h4 {
+    grid-column: 1/-1;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+.booking__signupdetails .detail {
+    height: 75%;
+}
+.booking__signupdetails--radio {
+    grid-column: 1/-1;
+}
+.error {
+    color: red;
+    font-size: 10px;
+}
+.personaldetails {
+    display: grid;
+    grid-template-columns: 200px auto ;
+    /* width: 100px; */
+    align-items: center;
+    justify-items: fill;
+    row-gap: 7px;
+}
+.personaldetails .lbl {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 1.3rem;
+
+}
+.personaldetails .field {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    height: 1.3rem;
+}
+.communication span {
+    margin-left: 10px;
+}
+.tablepictures h2, .booking__form--hero h2 {
+    text-align: center;
+    color: rgb(230, 162, 16);
 }

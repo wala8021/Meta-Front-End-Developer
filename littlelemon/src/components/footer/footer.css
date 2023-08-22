@@ -2,26 +2,33 @@
 .footer {
     display: grid;
     /* grid-template-columns: auto auto auto auto; */
-    justify-content: space-evenly;
-    grid-template-columns: 25% 25% 25% 25%;
-    margin-bottom: 50px;
-    margin-left: 150px;
-    margin-right: 150px;
+    /* justify-content: space-evenly; */
+    grid-template-columns: repeat(12, 1fr);
+    /* margin-bottom: 50px; */
 
 }
 
 .footer section {
     border: blue solid ;
+    padding-left: 20px;
+    margin-bottom: 20px;
+
 }
 
-/* .nav ul {
+.footer ul, a {
     list-style: none;
-} */
-
-.footer ul {
-    list-style: none;
-    text-indent: -40px;
+    text-decoration: none;
 }
-.footer section {
-    margin-left: 0px;
+.footer__logo {
+    grid-column: 1/4;
+}
+.footer__navigation {
+    grid-column: 4/7;
+    padding-bottom: 10px;
+}
+.footer__contact {
+    grid-column: 7/10;
+}
+.footer__social {
+    grid-column: 10/13;
 }

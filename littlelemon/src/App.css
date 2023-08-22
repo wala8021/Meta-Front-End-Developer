@@ -44,3 +44,32 @@
 /* .nav {
   margin-left: 22%;
 } */
+
+
+* {
+  margin:0px;
+  padding: 0px;
+}
+html {
+  font-size: 100%; /* use this with relative size "rem" to make your page more responsive to user/browser settings*/
+}
+body {
+  /* margin: 20px; */
+  height: 95vh;
+  min-width: 800px;
+  max-width: 1400px;
+  /* display: flex; */
+  /* align-items: center; */
+  /* margin-left: 1vw;
+  margin-right: 1vw; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;/*minmax(1vw, -50%);*/
+  transform: translate(-50%, -50%);
+  /* margin: 1vw; */
+  /*margin-right: minmax(20px, 2rem); */
+  margin-left: 1vw;
+  /*margin-right: 1vw; */
+
+}
